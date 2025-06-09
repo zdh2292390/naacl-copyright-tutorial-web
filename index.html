@@ -26,6 +26,18 @@
     }
     .intro { line-height: 1.5; margin-bottom: 20px; }
     .intro p { margin: 0; text-align: justify; }
+    .citation-box { 
+      border: 1px solid #ccc; 
+      padding: 20px; 
+      margin: 20px 0; 
+      background-color: #f9f9f9; 
+      border-radius: 8px; 
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+    }
+    .citation-box pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
   </style>
 </head>
 <body>
@@ -133,6 +145,76 @@
       <div id="contact-en">For questions, please email: <a href="mailto:dzhang42@stevens.edu">dzhang42@stevens.edu</a></div>
       <div id="contact-zh" style="display:none">如有疑问，请联系邮箱：<a href="mailto:dzhang42@stevens.edu">dzhang42@stevens.edu</a></div>
     </div>
+    <div class="citation">
+      <h2 id="citation-title">Citation</h2>
+      <div class="citation-box">
+        <div id="citation-en">
+          <p>If you find this material helpful, please consider citing the following papers:</p>
+          <pre>
+@inproceedings{zhang-etal-2025-llms,
+    title = "{LLM}s and Copyright Risks: Benchmarks and Mitigation Approaches",
+    author = "Zhang, Denghui  and
+      Xu, Zhaozhuo  and
+      Zhao, Weijie",
+    editor = "Lomeli, Maria  and
+      Swayamdipta, Swabha  and
+      Zhang, Rui",
+    booktitle = "Proceedings of the 2025 Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 5: Tutorial Abstracts)",
+    month = may,
+    year = "2025",
+    address = "Albuquerque, New Mexico",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.naacl-tutorial.7/",
+    doi = "10.18653/v1/2025.naacl-tutorial.7",
+    pages = "44--50",
+    ISBN = "979-8-89176-193-3"
+}
+
+@inproceedings{xu-etal-2024-llms,
+  title = "Do {LLM}s Know to Respect Copyright Notice?",
+  author = "Xu, Jialiang  and
+    Li, Shenglan  and
+    Xu, Zhaozhuo  and
+    Zhang, Denghui",
+  editor = "Al-Onaizan, Yaser  and
+    Bansal, Mohit  and
+    Chen, Yun-Nung",
+  booktitle = "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
+  month = nov,
+  year = "2024",
+  address = "Miami, Florida, USA",
+  publisher = "Association for Computational Linguistics",
+  url = "https://aclanthology.org/2024.emnlp-main.1147/",
+  doi = "10.18653/v1/2024.emnlp-main.1147",
+  pages = "20604--20619"
+}
+          </pre>
+        </div>
+        <div id="citation-zh" style="display:none">
+          <p>如果您觉得这些材料有帮助，请考虑引用以下论文：</p>
+          <pre>
+@inproceedings{zhang-etal-2025-llms,
+    title = "{LLM}s and Copyright Risks: Benchmarks and Mitigation Approaches",
+    author = "Zhang, Denghui  and
+      Xu, Zhaozhuo  and
+      Zhao, Weijie",
+    editor = "Lomeli, Maria  and
+      Swayamdipta, Swabha  and
+      Zhang, Rui",
+    booktitle = "Proceedings of the 2025 Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 5: Tutorial Abstracts)",
+    month = may,
+    year = "2025",
+    address = "Albuquerque, New Mexico",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.naacl-tutorial.7/",
+    doi = "10.18653/v1/2025.naacl-tutorial.7",
+    pages = "44--50",
+    ISBN = "979-8-89176-193-3"
+}
+          </pre>
+        </div>
+      </div>
+    </div>
   </div>
   <footer style="text-align: center; padding: 20px; background: #2c3e50; color: #fff; font-size: 0.9em;">
     &copy; 2025 NAACL Tutorial. All rights reserved.
@@ -163,6 +245,9 @@
         document.getElementById('contact-title').textContent = 'Contact';
         document.getElementById('contact-en').style.display = '';
         document.getElementById('contact-zh').style.display = 'none';
+        document.getElementById('citation-title').textContent = 'Citation';
+        document.getElementById('citation-en').style.display = '';
+        document.getElementById('citation-zh').style.display = 'none';
       } else {
         enBtn.classList.remove('active');
         zhBtn.classList.add('active');
@@ -183,6 +268,9 @@
         document.getElementById('contact-title').textContent = '联系方式';
         document.getElementById('contact-en').style.display = 'none';
         document.getElementById('contact-zh').style.display = '';
+        document.getElementById('citation-title').textContent = '引用';
+        document.getElementById('citation-en').style.display = 'none';
+        document.getElementById('citation-zh').style.display = '';
       }
     }
   </script>
